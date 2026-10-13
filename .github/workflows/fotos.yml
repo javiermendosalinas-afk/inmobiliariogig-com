@@ -1,0 +1,27 @@
+name: Traer fotos oficiales desde Drive
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 10 * * 1"
+permissions:
+  contents: write
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install google-api-python-client==2.149.0 google-auth==2.34.0 pillow==10.4.0
+      - name: Traer fotos
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          DRIVE_CARPETA: 1lOjlM8-LMGXYdO9tZPxuyn_YEzwCxvVN
+        run: python -u herramientas/traer_fotos_drive.py
+      - name: Publicar
+        run: |
+          git config user.email "claude@acierta.pro"; git config user.name "Fotos automaticas"
+          git add assets/desarrollos
+          git diff --cached --quiet || (git commit -m "Fotos oficiales de GIG desde Drive" && git push)
