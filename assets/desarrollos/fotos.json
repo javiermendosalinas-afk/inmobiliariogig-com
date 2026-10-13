@@ -10,81 +10,81 @@
    },
    {
     "archivo": "assets/desarrollos/abie/02.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0897.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0956.jpg",
     "ancho": 1600,
     "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/03.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0896.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0964.jpg",
     "ancho": 1600,
     "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/04.jpg",
-    "origen": "ABIE/Galeria/Fotos/Cobalto/IMG_1407.JPG",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0911.jpg",
     "ancho": 1600,
-    "alto": 1067
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/05.jpg",
-    "origen": "ABIE/Galeria/Fotos/Andrómeda/Andromeda_A.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0947.jpg",
     "ancho": 1600,
-    "alto": 1344
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/06.jpg",
-    "origen": "ABIE/Galeria/Fotos/Cygnus/Cygnus_A.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0913.jpg",
     "ancho": 1600,
-    "alto": 1312
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/07.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_9498.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0979.jpg",
     "ancho": 1600,
-    "alto": 1130
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/08.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_9517.jpg",
-    "ancho": 1068,
-    "alto": 1600
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0953.jpg",
+    "ancho": 1600,
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/09.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_4405.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0897.jpg",
     "ancho": 1600,
-    "alto": 1067
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/10.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_4373.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0895.jpg",
     "ancho": 1600,
-    "alto": 1065
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/11.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_4485.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0922.jpg",
     "ancho": 1600,
-    "alto": 1028
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/12.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_3146.JPEG",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0990.jpg",
     "ancho": 1600,
-    "alto": 929
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/13.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_3194.JPEG",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0993.jpg",
     "ancho": 1600,
-    "alto": 925
+    "alto": 1200
    },
    {
     "archivo": "assets/desarrollos/abie/14.jpg",
-    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_4439.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0899.jpg",
     "ancho": 1600,
-    "alto": 1063
+    "alto": 1200
    }
   ],
   "imagenes_en_zip": 168
@@ -95,6 +95,84 @@
    {
     "archivo": "assets/desarrollos/senderos-de-monteverde/01.jpg",
     "origen": "Senderos de Monteverde/Galeria/IMG_3900.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/02.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4252.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/03.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4092.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/04.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_3988.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/05.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4224.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/06.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_3935.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/07.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4200.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/08.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4214.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/09.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4070.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/10.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4061.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/11.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4049.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/12.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4163.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/13.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4103.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/14.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_4074.JPG",
     "ancho": 1600,
     "alto": 1067
    }
@@ -118,51 +196,75 @@
    },
    {
     "archivo": "assets/desarrollos/albazur/03.jpg",
+    "origen": "ALBAZUR/Fichas Técnicas/Ocre/Fachada 2.jpeg",
+    "ancho": 1600,
+    "alto": 900
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/04.jpg",
+    "origen": "ALBAZUR/Fichas Técnicas/Ocre/Fachada 1.jpeg",
+    "ancho": 1600,
+    "alto": 900
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/05.jpg",
     "origen": "ALBAZUR/Galería/Fotos/IMG_8493.JPG",
     "ancho": 1600,
     "alto": 1067
    },
    {
-    "archivo": "assets/desarrollos/albazur/04.jpg",
+    "archivo": "assets/desarrollos/albazur/06.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/IMG_8515.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/07.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/IMG_8511.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/08.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/IMG_8501.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/09.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/IMG_8509.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/10.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/IMG_8521.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/11.jpg",
     "origen": "ALBAZUR/Galería/Fotos/DSC_6946.jpg",
     "ancho": 1600,
     "alto": 1068
    },
    {
-    "archivo": "assets/desarrollos/albazur/05.jpg",
-    "origen": "ALBAZUR/Galería/Fotos/DJI_0084.jpg",
+    "archivo": "assets/desarrollos/albazur/12.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/DSC_6932.jpg",
     "ancho": 1600,
-    "alto": 899
+    "alto": 1068
    },
    {
-    "archivo": "assets/desarrollos/albazur/06.jpg",
-    "origen": "ALBAZUR/Fichas Técnicas/FICHA-MALVA.jpg",
+    "archivo": "assets/desarrollos/albazur/13.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/DSC_6986.jpg",
     "ancho": 1600,
-    "alto": 1600
+    "alto": 1068
    },
    {
-    "archivo": "assets/desarrollos/albazur/07.jpg",
-    "origen": "ALBAZUR/Galería/Fotos/Ocre.jpg",
-    "ancho": 1046,
-    "alto": 1600
-   },
-   {
-    "archivo": "assets/desarrollos/albazur/08.jpg",
-    "origen": "ALBAZUR/Lista de precios Coto Renacer .jpeg",
+    "archivo": "assets/desarrollos/albazur/14.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/DSC_7440.jpg",
     "ancho": 1600,
-    "alto": 1406
-   },
-   {
-    "archivo": "assets/desarrollos/albazur/09.jpg",
-    "origen": "ALBAZUR/Lista de precios coto Aurea Terrenos.jpeg",
-    "ancho": 1230,
-    "alto": 1600
-   },
-   {
-    "archivo": "assets/desarrollos/albazur/10.jpg",
-    "origen": "ALBAZUR/Promociones/Malva Albazur promo.jpeg",
-    "ancho": 813,
-    "alto": 1536
+    "alto": 1068
    }
   ],
   "imagenes_en_zip": 42
@@ -178,33 +280,81 @@
    },
    {
     "archivo": "assets/desarrollos/castanar/02.jpg",
+    "origen": "Castañar/Galería/Fotos/IMG_9826.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/03.jpg",
+    "origen": "Castañar/Galería/Fotos/IMG_9859.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/04.jpg",
     "origen": "Castañar/Fichas Técnicas/MAGENTA/MAGENTA_B-D.jpg",
     "ancho": 1600,
     "alto": 900
    },
    {
-    "archivo": "assets/desarrollos/castanar/03.jpg",
+    "archivo": "assets/desarrollos/castanar/05.jpg",
+    "origen": "Castañar/Fichas Técnicas/MAGENTA/MAGENTA_ A-C.jpg",
+    "ancho": 1600,
+    "alto": 900
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/06.jpg",
+    "origen": "Castañar/Fichas Técnicas/MAGENTA/MAGENTA CONJUNTO.jpg",
+    "ancho": 1600,
+    "alto": 900
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/07.jpg",
     "origen": "Castañar/Fichas Técnicas/BERMELLÓN/BERMELLON_PA.jpg",
     "ancho": 823,
     "alto": 1600
    },
    {
-    "archivo": "assets/desarrollos/castanar/04.jpg",
+    "archivo": "assets/desarrollos/castanar/08.jpg",
+    "origen": "Castañar/Fichas Técnicas/CAMEL/CAMEL_PA_AMPLIACION.jpg",
+    "ancho": 823,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/09.jpg",
+    "origen": "Castañar/Fichas Técnicas/MAGENTA/MAGENTA_PB.jpg",
+    "ancho": 823,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/10.jpg",
+    "origen": "Castañar/Fichas Técnicas/MAGENTA/MAGENTA_PA.jpg",
+    "ancho": 823,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/11.jpg",
+    "origen": "Castañar/Fichas Técnicas/CAMEL/CAMEL_PB_AMPLIACION.jpg",
+    "ancho": 823,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/12.jpg",
     "origen": "Castañar/Fichas Técnicas/CAMEL/Ficha técninca CAMEL.jpg",
     "ancho": 1036,
     "alto": 1600
    },
    {
-    "archivo": "assets/desarrollos/castanar/05.jpg",
+    "archivo": "assets/desarrollos/castanar/13.jpg",
+    "origen": "Castañar/Fichas Técnicas/BERMELLÓN/Ficha técnica BERMELLON.jpg",
+    "ancho": 1033,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/14.jpg",
     "origen": "Castañar/Lista de precios.jpeg",
     "ancho": 1600,
     "alto": 1423
-   },
-   {
-    "archivo": "assets/desarrollos/castanar/06.jpg",
-    "origen": "Castañar/Galería/Fotos/Mesa de trabajo 13.jpg",
-    "ancho": 1080,
-    "alto": 1080
    }
   ],
   "imagenes_en_zip": 23
