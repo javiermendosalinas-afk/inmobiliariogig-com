@@ -1,0 +1,230 @@
+{
+ "abie": {
+  "desarrollo": "ABIE-20260905T050633Z-1-001",
+  "fotos": [
+   {
+    "archivo": "assets/desarrollos/abie/01.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0968.jpg",
+    "ancho": 1600,
+    "alto": 1200
+   },
+   {
+    "archivo": "assets/desarrollos/abie/02.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0897.jpg",
+    "ancho": 1600,
+    "alto": 1200
+   },
+   {
+    "archivo": "assets/desarrollos/abie/03.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Aéreas editadas/DJI_0896.jpg",
+    "ancho": 1600,
+    "alto": 1200
+   },
+   {
+    "archivo": "assets/desarrollos/abie/04.jpg",
+    "origen": "ABIE/Galeria/Fotos/Cobalto/IMG_1407.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/abie/05.jpg",
+    "origen": "ABIE/Galeria/Fotos/Andrómeda/Andromeda_A.jpg",
+    "ancho": 1600,
+    "alto": 1344
+   },
+   {
+    "archivo": "assets/desarrollos/abie/06.jpg",
+    "origen": "ABIE/Galeria/Fotos/Cygnus/Cygnus_A.jpg",
+    "ancho": 1600,
+    "alto": 1312
+   },
+   {
+    "archivo": "assets/desarrollos/abie/07.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_9498.jpg",
+    "ancho": 1600,
+    "alto": 1130
+   },
+   {
+    "archivo": "assets/desarrollos/abie/08.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_9517.jpg",
+    "ancho": 1068,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/abie/09.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_4405.jpg",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/abie/10.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_4373.jpg",
+    "ancho": 1600,
+    "alto": 1065
+   },
+   {
+    "archivo": "assets/desarrollos/abie/11.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_4485.jpg",
+    "ancho": 1600,
+    "alto": 1028
+   },
+   {
+    "archivo": "assets/desarrollos/abie/12.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_3146.JPEG",
+    "ancho": 1600,
+    "alto": 929
+   },
+   {
+    "archivo": "assets/desarrollos/abie/13.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_3194.JPEG",
+    "ancho": 1600,
+    "alto": 925
+   },
+   {
+    "archivo": "assets/desarrollos/abie/14.jpg",
+    "origen": "ABIE/Galeria/Fotos/Sesión FER COTA/Terrestres editadas/DSC_4439.jpg",
+    "ancho": 1600,
+    "alto": 1063
+   }
+  ],
+  "imagenes_en_zip": 168
+ },
+ "senderos-de-monteverde": {
+  "desarrollo": "Senderos de Monteverde-20260905T050615Z-1-001",
+  "fotos": [
+   {
+    "archivo": "assets/desarrollos/senderos-de-monteverde/01.jpg",
+    "origen": "Senderos de Monteverde/Galeria/IMG_3900.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   }
+  ],
+  "imagenes_en_zip": 22
+ },
+ "albazur": {
+  "desarrollo": "ALBAZUR-20260905T050557Z-1-001",
+  "fotos": [
+   {
+    "archivo": "assets/desarrollos/albazur/01.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/fachada plumbago.png",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/02.jpg",
+    "origen": "ALBAZUR/Fichas Técnicas/Ocre/Fachada un costado.jpeg",
+    "ancho": 1600,
+    "alto": 900
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/03.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/IMG_8493.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/04.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/DSC_6946.jpg",
+    "ancho": 1600,
+    "alto": 1068
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/05.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/DJI_0084.jpg",
+    "ancho": 1600,
+    "alto": 899
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/06.jpg",
+    "origen": "ALBAZUR/Fichas Técnicas/FICHA-MALVA.jpg",
+    "ancho": 1600,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/07.jpg",
+    "origen": "ALBAZUR/Galería/Fotos/Ocre.jpg",
+    "ancho": 1046,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/08.jpg",
+    "origen": "ALBAZUR/Lista de precios Coto Renacer .jpeg",
+    "ancho": 1600,
+    "alto": 1406
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/09.jpg",
+    "origen": "ALBAZUR/Lista de precios coto Aurea Terrenos.jpeg",
+    "ancho": 1230,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/albazur/10.jpg",
+    "origen": "ALBAZUR/Promociones/Malva Albazur promo.jpeg",
+    "ancho": 813,
+    "alto": 1536
+   }
+  ],
+  "imagenes_en_zip": 42
+ },
+ "castanar": {
+  "desarrollo": "Castañar-20260905T050554Z-1-001",
+  "fotos": [
+   {
+    "archivo": "assets/desarrollos/castanar/01.jpg",
+    "origen": "Castañar/Galería/Fotos/IMG_9838.JPG",
+    "ancho": 1600,
+    "alto": 1067
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/02.jpg",
+    "origen": "Castañar/Fichas Técnicas/MAGENTA/MAGENTA_B-D.jpg",
+    "ancho": 1600,
+    "alto": 900
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/03.jpg",
+    "origen": "Castañar/Fichas Técnicas/BERMELLÓN/BERMELLON_PA.jpg",
+    "ancho": 823,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/04.jpg",
+    "origen": "Castañar/Fichas Técnicas/CAMEL/Ficha técninca CAMEL.jpg",
+    "ancho": 1036,
+    "alto": 1600
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/05.jpg",
+    "origen": "Castañar/Lista de precios.jpeg",
+    "ancho": 1600,
+    "alto": 1423
+   },
+   {
+    "archivo": "assets/desarrollos/castanar/06.jpg",
+    "origen": "Castañar/Galería/Fotos/Mesa de trabajo 13.jpg",
+    "ancho": 1080,
+    "alto": 1080
+   }
+  ],
+  "imagenes_en_zip": 23
+ },
+ "monteza": {
+  "desarrollo": "Monteza-20260905T050551Z-1-001",
+  "fotos": [
+   {
+    "archivo": "assets/desarrollos/monteza/01.jpg",
+    "origen": "Monteza/PLANO MONTEZA.jpg",
+    "ancho": 1600,
+    "alto": 900
+   },
+   {
+    "archivo": "assets/desarrollos/monteza/02.jpg",
+    "origen": "Monteza/Plan maestro.jpeg",
+    "ancho": 1600,
+    "alto": 1216
+   }
+  ],
+  "imagenes_en_zip": 2
+ }
+}
