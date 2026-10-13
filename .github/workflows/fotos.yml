@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - herramientas/traer_fotos_drive.py
+      - herramientas/generar_sitio.py
       - .github/workflows/fotos.yml
   schedule:
     - cron: "0 10 * * 1"
@@ -24,8 +25,10 @@ jobs:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           DRIVE_CARPETA: 1lOjlM8-LMGXYdO9tZPxuyn_YEzwCxvVN
         run: python -u herramientas/traer_fotos_drive.py
+      - name: Regenerar sitio
+        run: python -u herramientas/generar_sitio.py
       - name: Publicar
         run: |
           git config user.email "claude@acierta.pro"; git config user.name "Fotos automaticas"
-          git add assets/desarrollos
+          git add assets/desarrollos index.html desarrollos
           git diff --cached --quiet || (git commit -m "Fotos oficiales de GIG desde Drive" && git push)
