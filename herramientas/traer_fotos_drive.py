@@ -42,6 +42,8 @@ def guardar(imagenes, carpeta):
         except Exception:
             continue
     candidatas.sort(key=lambda x: (x[0], x[1]))
+    if not candidatas:
+        return None
     os.makedirs(carpeta, exist_ok=True)
     for f in os.listdir(carpeta):
         os.remove(os.path.join(carpeta, f))
@@ -66,10 +68,16 @@ def guardar(imagenes, carpeta):
 def main():
     q = f"'{CARPETA}' in parents and trashed = false"
     archivos = drive.files().list(q=q, fields="files(id,name,mimeType,size)", pageSize=200, supportsAllDrives=True, includeItemsFromAllDrives=True).execute()["files"]
-    resultado = {}
+    try:
+        resultado = json.load(open(os.path.join(SALIDA, "fotos.json"), encoding="utf-8"))
+    except Exception:
+        resultado = {}
+    registro = []
     for a in archivos:
         nombre = a["name"]
-        if nombre.lower().endswith(".zip"):
+        if not nombre.lower().endswith(".zip"):
+            continue
+        try:
             s = slug(nombre[:-4])
             with tempfile.TemporaryDirectory() as tmp:
                 ruta = os.path.join(tmp, "a.zip")
@@ -81,10 +89,16 @@ def main():
                         if re.search(r"\.(jpe?g|png|webp)$", info.filename, re.I) and 150_000 < info.file_size < 40_000_000 and "__MACOSX" not in info.filename:
                             imgs.append((info.filename, z.read(info)))
                 fotos = guardar(imgs, os.path.join(SALIDA, s))
-                resultado[s] = {"desarrollo": nombre[:-4], "fotos": fotos, "imagenes_en_zip": len(imgs)}
-                print(f"  {s}: {len(fotos)} fotos de {len(imgs)} imágenes", flush=True)
+                if fotos:
+                    resultado[s] = {"desarrollo": nombre[:-4], "fotos": fotos, "imagenes_en_zip": len(imgs)}
+                registro.append(f"OK {s}: {len(fotos or [])} fotos de {len(imgs)} imágenes")
+                print(registro[-1], flush=True)
+        except Exception as e:
+            registro.append(f"ERROR {nombre}: {type(e).__name__}: {str(e)[:300]}")
+            print(registro[-1], flush=True)
     os.makedirs(SALIDA, exist_ok=True)
     json.dump(resultado, open(os.path.join(SALIDA, "fotos.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    open(os.path.join(SALIDA, "registro.txt"), "w", encoding="utf-8").write("\n".join(registro) + "\n")
 
 
 if __name__ == "__main__":
