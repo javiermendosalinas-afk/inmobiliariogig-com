@@ -45,12 +45,15 @@ def guardar(imagenes, carpeta):
     os.makedirs(carpeta, exist_ok=True)
     for f in os.listdir(carpeta):
         os.remove(os.path.join(carpeta, f))
-    vistos, salida = set(), []
+    vistos, salida = [], []
     for _, area, nombre, im in candidatas:
-        clave = round(-area / 50000)
-        if clave in vistos:
+        # huella del contenido (dHash 8x8): descarta solo imágenes visualmente casi iguales
+        g = im.convert("L").resize((9, 8))
+        px = list(g.getdata())
+        huella = sum(1 << i for i in range(64) if px[(i // 8) * 9 + i % 8] > px[(i // 8) * 9 + i % 8 + 1])
+        if any(bin(huella ^ v).count("1") <= 6 for v in vistos):
             continue
-        vistos.add(clave)
+        vistos.append(huella)
         im = ImageOps.exif_transpose(im).convert("RGB"); im.thumbnail((1600, 1600))
         ruta = os.path.join(carpeta, f"{len(salida) + 1:02d}.jpg")
         im.save(ruta, "JPEG", quality=78, optimize=True, progressive=True)
