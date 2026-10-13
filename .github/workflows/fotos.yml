@@ -1,6 +1,10 @@
 name: Traer fotos oficiales desde Drive
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - herramientas/traer_fotos_drive.py
+      - .github/workflows/fotos.yml
   schedule:
     - cron: "0 10 * * 1"
 permissions:
