@@ -18,6 +18,21 @@ DES = [  # (slug, nombre, tipo, desde, hasta, preventa, foto_slug)
     ("albazur-terrenos", "Albazur", "Terrenos", 1150000, 2700000, True, "albazur"),
     ("monteza", "Monteza", "Terrenos", 1450000, 3176000, False, "monteza"),
 ]
+GANCHO = {
+ "castanar": "Tu primera casa propia, en preventa y a un precio que sí está a tu alcance.",
+ "la-arboleda": "Una casa para empezar a escribir la historia de tu familia.",
+ "haciendas-de-santa-cruz": "Estrena casa en preventa y asegura hoy el precio de mañana.",
+ "albazur-casas": "Casas amplias en preventa para la familia que está creciendo.",
+ "abie": "Más espacio para todo lo que importa: casas de GIG para vivir en grande.",
+ "viande": "Tu departamento en preventa: el primer paso hacia tu independencia.",
+ "sant-marti": "Departamentos para quien busca estilo, ubicación y una buena inversión.",
+ "duo24": "Departamentos de 3 recámaras y más de 100 m² para vivir sin acomodarte a medias.",
+ "valle-de-las-flores": "El terreno más accesible de GIG para empezar tu patrimonio.",
+ "nabi": "Tu terreno propio, listo para construir cuando tú lo decidas.",
+ "senderos-de-monteverde": "Construye tu casa rodeado de naturaleza, con alberca y áreas verdes.",
+ "albazur-terrenos": "Terrenos en preventa: compra hoy y deja que tu patrimonio crezca.",
+ "monteza": "Terrenos para construir la casa que imaginas, en un desarrollo con visión.",
+}
 NOTAS = {"duo24": "Departamentos de 3 recámaras con más de 100 m² desde $5,700,000 (información de GIG, agosto de 2026).",
          "monteza": "Evento especial el 22 de octubre de 2026, 7:00 pm, en Tangente Dúo: beneficio extra para el cliente solo ese día.",
          "senderos-de-monteverde": "Evento especial el 22 de octubre de 2026, 7:00 pm, en Tangente Dúo: beneficio extra para el cliente solo ese día."}
@@ -49,7 +64,7 @@ def pag(titulo, desc, cuerpo, raiz=""):
 <style>{CSS}</style></head><body>
 <header class="cab"><div><b>Desarrollos <span>GIG</span> · Acierta Max</b><a class="wa" href="{wa('Hola, vengo de inmobiliariogig.com y quiero información')}" target="_blank" rel="noopener">WhatsApp</a></div></header>
 {cuerpo}
-<footer><b>Acierta Max, S.A. de C.V. · Inmobiliaria autorizada para la comercialización de desarrollos de GIG.</b><br>
+<footer><b>Acierta Max, S.A. de C.V. · Inmobiliaria autorizada para la comercialización de desarrollos de GIG.</b> GIG es marca de su titular; cifras de trayectoria según información publicada por GIG.<br>
 Mismo precio y condiciones que con el desarrollador; la asesoría no tiene costo para ti. Profesionales inmobiliarios, miembros de AMPI y NAR.<br>
 {E(VIGENCIA)} Imágenes y renders proporcionados por GIG; pueden ser ilustrativos.<br>
 Atención 24 h por WhatsApp · asesores todos los días de 9:00 a 19:00 · <a href="https://acierta.pro">acierta.pro</a></footer></body></html>"""
@@ -63,17 +78,23 @@ def main():
                      f'<div class="tx"><h3>{E(n)}</h3><div class="tipo">{t}</div><div class="p">{din(d)} – {din(h)}</div></div></a>')
         gal = "".join(f'<img src="../{f}" alt="{E(n)}, foto oficial {i+1}" loading="lazy">' for i, f in enumerate(fotos)) or "<p class='vig'>Fotos y renders: pide la presentación completa por WhatsApp.</p>"
         cuerpo = (f'<section class="hero"><span class="sello">✅ ACIERTA MAX · INMOBILIARIA AUTORIZADA GIG</span><h1>{E(n)}</h1>'
-                  f'<p>{t} {"en preventa " if pre else ""}de GIG · desde {din(d)} hasta {din(h)}</p></section><section class="sec">'
+                  f'<p style="font-size:1.25rem;color:#fff;max-width:36em;margin:10px auto 6px">{E(GANCHO.get(s, ""))}</p><p>{t} {"en preventa " if pre else ""}de GIG · desde {din(d)} hasta {din(h)}</p></section><section class="sec">'
                   + (f'<div class="aviso">📌 {E(NOTAS[s])}</div>' if s in NOTAS else "")
                   + f'<p class="vig">{E(VIGENCIA)}</p><div class="cta"><a class="wa btn" href="{wa(f"Hola, vengo de inmobiliariogig.com. Me interesa {n} ({t}). Quiero información y agendar visita")}" target="_blank" rel="noopener">Quiero información de {E(n)}</a>'
                   f'<a class="btn b2" href="{wa(f"Hola, vengo de inmobiliariogig.com. Quiero calcular mi crédito o Infonavit para {n}")}" target="_blank" rel="noopener">Calcular mi crédito</a></div>'
-                  f'<h2>Galería oficial</h2><div class="gal">{gal}</div><p style="margin-top:18px"><a href="../index.html">← Ver todos los desarrollos</a></p></section>')
+                  f'<h2>Galería oficial</h2><div class="gal">{gal}</div>'
+                  '<div class="aviso" style="margin-top:28px;background:#fff;border-color:#dfe3ea"><b>¿Por qué comprar con GIG?</b> Según GIG, son más de 40 años desarrollando en el occidente del país, más de 100 desarrollos y más de 150,000 viviendas entregadas. '
+                  'Y con Acierta Max, inmobiliaria autorizada, pagas el mismo precio que con el desarrollador y recibes asesoría, comparativo y cálculo de crédito sin costo.</div>'
+                  f'<p style="margin-top:18px"><a href="../index.html">← Ver todos los desarrollos</a></p></section>')
         open(f"desarrollos/{s}.html", "w", encoding="utf-8").write(pag(f"{n} · {t} de GIG · Acierta Max", f"{n}: {t} de GIG desde {din(d)}. Acierta Max, inmobiliaria autorizada.", cuerpo))
-    cuerpo = ('<section class="hero"><span class="sello">✅ ACIERTA MAX · INMOBILIARIA AUTORIZADA</span><h1>Desarrollos GIG en Guadalajara</h1>'
-              '<p>Casas, departamentos y terrenos de GIG con información oficial del desarrollador. Mismo precio y condiciones, con asesoría profesional sin costo para ti.</p></section>'
+    cuerpo = ('<section class="hero"><span class="sello">✅ ACIERTA MAX · INMOBILIARIA AUTORIZADA</span><h1>Tu próximo hogar, con quien ha entregado más de 150,000</h1>'
+              '<p>Casas, departamentos y terrenos de GIG en la Zona Metropolitana de Guadalajara, desde $699,000. Elige el tuyo con información oficial y con alguien que te acompañe en cada paso.</p></section>'
               '<section class="ben"><div><b>💰 Mismo precio</b>Precios y condiciones oficiales de GIG, sin sobreprecio.</div><div><b>🏦 Crédito e Infonavit</b>Te calculamos tu crédito sin costo.</div>'
               '<div><b>⚖️ Comparativo</b>Comparamos desarrollos para que elijas con datos.</div><div><b>✅ Acierta Verifica</b>Revisión física y documental antes de firmar.</div></section>'
-              f'<section class="sec"><h2>Elige tu desarrollo</h2><p class="vig">{E(VIGENCIA)}</p>'
+              '<section class="sec" id="gig"><h2>Más de 40 años construyendo patrimonio en Jalisco</h2>'
+              '<p class="vig" style="font-size:1.05rem;max-width:46em">Cuando compras una casa, también eliges en quién confiar. GIG es una empresa jalisciense fundada en 1978, parte de Grupo Empresarial G. Según la propia empresa, ha desarrollado más de 100 proyectos y entregado más de 150,000 viviendas, entre ellos desarrollos que hoy son referencia en la ciudad, como Valle Real y Jardín Real.</p>'
+              '<div class="ben" style="margin:18px 0 0;padding:0"><div><b>1978</b>Año de fundación, en Jalisco</div><div><b>+100</b>desarrollos, según GIG</div><div><b>+150,000</b>viviendas entregadas, según GIG</div><div><b>Valle Real</b>y Jardín Real, entre sus proyectos</div></div></section>'
+              f'<section class="sec"><h2>¿Qué estás buscando?</h2><p class="vig">{E(VIGENCIA)}</p>'
               '<div class="filtros"><button class="on" data-f="">Todos</button><button data-f="Casas">Casas</button><button data-f="Departamentos">Departamentos</button><button data-f="Terrenos">Terrenos</button></div>'
               f'<div class="grid">{"".join(cards)}</div></section>'
               '<script>document.querySelectorAll(".filtros button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filtros button").forEach(x=>x.classList.toggle("on",x===b));'
