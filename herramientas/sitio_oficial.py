@@ -10,25 +10,29 @@ def get(u, b=False):
     return r if b else r.decode("utf-8", "ignore")
 norm = lambda s: unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
 os.makedirs("datos/oficial", exist_ok=True)
-vistos, cola, paginas = set(), ["https://gig.mx/", "https://gig.mx/desarrollos", "https://gig.mx/proyectos"], {}
-while cola and len(vistos) < 60:
-    u = cola.pop(0)
-    if u in vistos: continue
-    vistos.add(u)
+inicio = ["https://gig.mx//cities?opn=detail&c=prc7c74ffb2986e11ea8d55525400abca3e", "https://gig.mx//property?opn=search&ty=V",
+          "https://gig.mx//property?opn=search&ty=D", "https://gig.mx//property?opn=search&ty=T", "https://gig.mx/"]
+candidatas, paginas = [], {}
+for u in inicio:
     try:
         h = get(u)
     except Exception as e:
         print("no disponible:", u, type(e).__name__); continue
     for href in re.findall(r'href="([^"]+)"', h):
-        v = urllib.parse.urljoin(u, href).split("#")[0]
-        n = norm(v)
-        if re.search(r"\.(pdf|jpe?g|png|webp|svg|css|js)$", n) or "whatsapp" in n or "facebook" in n or "instagram" in n:
-            continue
+        v = urllib.parse.urljoin(u, href.replace("&amp;", "&"))
+        if "gig.mx" in v and "opn=detail" in v and "cities" not in v and v not in candidatas:
+            candidatas.append(v)
+print(len(candidatas), "fichas candidatas")
+for v in candidatas[:80]:
+    try:
+        h = get(v)
+        tit = norm(" ".join(re.findall(r"<(?:title|h1|h2)[^>]*>(.*?)</(?:title|h1|h2)>", h, re.S))[:600])
+        tit = re.sub(r"<[^>]+>", " ", tit)
         for slug, al in NOMBRES.items():
-            if slug not in paginas and any(norm(a).replace(" ", "") in n.replace("-", "").replace("_", "") for a in al):
-                paginas[slug] = v
-        if "gig.mx" in urllib.parse.urlparse(v).netloc and v not in vistos and len(cola) < 80 and re.search(r"desarroll|proyect|residencial|vivienda|casas|departament|terreno", n):
-            cola.append(v)
+            if slug not in paginas and any(norm(a) in tit for a in al):
+                paginas[slug] = v; break
+    except Exception:
+        pass
 print("Páginas:", json.dumps(paginas, ensure_ascii=False, indent=1))
 for slug, u in paginas.items():
     try:
