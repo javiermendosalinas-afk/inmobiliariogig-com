@@ -18,6 +18,20 @@ DES = [  # (slug, nombre, tipo, desde, hasta, preventa, foto_slug)
     ("albazur-terrenos", "Albazur", "Terrenos", 1150000, 2700000, True, "albazur"),
     ("monteza", "Monteza", "Terrenos", 1450000, 3176000, False, "monteza"),
 ]
+INFO = {  # datos verificados (oct 2026); se completan con la visita a cada desarrollo
+ "duo24": {"dir": "Av. López Mateos Sur 4255, Loma Bonita, Zapopan", "q": "DUO24 Lopez Mateos Sur 4255 Zapopan",
+   "detalle": "Dos torres de 24 niveles con 306 departamentos de 1, 2 y 3 recámaras, de 50 a 103 m², y 6 penthouses de 220 m². Sobre López Mateos, a minutos de Plaza del Sol, La Perla y Expo Guadalajara.",
+   "incluye": ["Departamentos de 1, 2 y 3 recámaras, de 50 a 103 m²", "Penthouses de 220 m² más terraza", "Más de 17 amenidades: alberca de nado, alberca infantil, sun deck, gimnasio, game room, yoga deck y sport bar", "Área comercial en planta baja", "Entrega inmediata y preventa"]},
+ "albazur-casas": {"dir": "Pontevedra / Arboleda Bosques de Santa Anita, Tlajomulco", "q": "Albazur Tlajomulco Jalisco",
+   "detalle": "Casas en coto al sur de la Zona Metropolitana, en una zona en crecimiento cerca de Galerías Santa Anita, Colegio Pedregal, Instituto Tepeyac y la Prepa Tec.",
+   "incluye": ["4 prototipos de casa, de 3 recámaras", "Por ejemplo, modelo Plúmbago: 116 m² de construcción en 102 m² de terreno", "Casa club, alberca, gimnasio y dog park", "Áreas verdes, asadores, canchas y zona wifi"]},
+ "albazur-terrenos": {"dir": "Pontevedra / Arboleda Bosques de Santa Anita, Tlajomulco", "q": "Albazur Tlajomulco Jalisco",
+   "detalle": "Terrenos residenciales en el mismo desarrollo que las casas de Albazur, con todas sus amenidades.",
+   "incluye": ["Terrenos residenciales en coto", "Casa club, alberca, gimnasio y dog park", "Cerca de Galerías Santa Anita y colegios de la zona sur"]},
+ "senderos-de-monteverde": {"dir": "Boulevard Senderos de Monteverde, Tlajomulco (C.P. 45646)", "q": "Senderos de Monteverde Tlajomulco",
+   "detalle": "Fraccionamiento rodeado de naturaleza al sur de la ciudad, a minutos de las Plazas Outlet, con cotos privados y un club general.",
+   "incluye": ["Lotes desde 120 m²", "Cotos con alberca y terraza", "Doble caseta de seguridad", "Club con alberca olímpica, tenis, básquetbol y futbol (con costo adicional)"]},
+}
 GANCHO = {
  "castanar": "Tu primera casa propia, en preventa y a un precio que sí está a tu alcance.",
  "la-arboleda": "Una casa para empezar a escribir la historia de tu familia.",
@@ -80,6 +94,10 @@ def main():
         cuerpo = (f'<section class="hero"><span class="sello">✅ ACIERTA MAX · INMOBILIARIA AUTORIZADA GIG</span><h1>{E(n)}</h1>'
                   f'<p style="font-size:1.25rem;color:#fff;max-width:36em;margin:10px auto 6px">{E(GANCHO.get(s, ""))}</p><p>{t} {"en preventa " if pre else ""}de GIG · desde {din(d)} hasta {din(h)}</p></section><section class="sec">'
                   + (f'<div class="aviso">📌 {E(NOTAS[s])}</div>' if s in NOTAS else "")
+                  + ((f'<h2>Dónde está y qué incluye</h2><p style="color:#5b6575;max-width:46em">{E(INFO[s]["detalle"])}</p>'
+                      f'<p><b>Ubicación:</b> {E(INFO[s]["dir"])} · <a href="https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(INFO[s]["q"])}" target="_blank" rel="noopener">Cómo llegar</a></p>'
+                      '<ul style="line-height:1.9;padding-left:20px">' + "".join(f"<li>{E(x)}</li>" for x in INFO[s]["incluye"]) + '</ul>') if s in INFO else
+                     '<p class="vig">Pronto: ubicación, modelos y fotos de nuestra visita al desarrollo. Mientras, pídelos por WhatsApp y un asesor te los manda hoy.</p>')
                   + f'<p class="vig">{E(VIGENCIA)}</p><div class="cta"><a class="wa btn" href="{wa(f"Hola, vengo de inmobiliariogig.com. Me interesa {n} ({t}). Quiero información y agendar visita")}" target="_blank" rel="noopener">Quiero información de {E(n)}</a>'
                   f'<a class="btn b2" href="{wa(f"Hola, vengo de inmobiliariogig.com. Quiero calcular mi crédito o Infonavit para {n}")}" target="_blank" rel="noopener">Calcular mi crédito</a></div>'
                   f'<h2>Galería oficial</h2><div class="gal">{gal}</div>'
