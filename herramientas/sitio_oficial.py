@@ -10,7 +10,7 @@ def get(u, b=False):
     return r if b else r.decode("utf-8", "ignore")
 norm = lambda s: unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
 os.makedirs("datos/oficial", exist_ok=True)
-inicio = ["https://gig.mx//cities?opn=detail&c=prc7c74ffb2986e11ea8d55525400abca3e", "https://gig.mx//property?opn=search&ty=V",
+inicio = ["https://gig.mx/cities?opn=segment&c=prc7c74ffb2986e11ea8d55525400abca3e&t=CA", "https://gig.mx/cities?opn=segment&c=prc7c74ffb2986e11ea8d55525400abca3e&t=DE", "https://gig.mx/cities?opn=segment&c=prc7c74ffb2986e11ea8d55525400abca3e&t=TE", "https://gig.mx//cities?opn=detail&c=prc7c74ffb2986e11ea8d55525400abca3e", "https://gig.mx//property?opn=search&ty=V",
           "https://gig.mx//property?opn=search&ty=D", "https://gig.mx//property?opn=search&ty=T", "https://gig.mx/"]
 candidatas, paginas = [], {}
 for u in inicio:
@@ -20,9 +20,9 @@ for u in inicio:
         print("no disponible:", u, type(e).__name__); continue
     for href in re.findall(r'href="([^"]+)"', h):
         v = urllib.parse.urljoin(u, href.replace("&amp;", "&"))
-        if "gig.mx" in v and "opn=detail" in v and "cities" not in v and v not in candidatas:
+        if "gig.mx" in v and "opn=" in v and not re.search(r"cities\?|about\?|property\?opn=search|credits|news|jobs|contact", v) and v not in candidatas:
             candidatas.append(v)
-print(len(candidatas), "fichas candidatas")
+print(len(candidatas), "fichas candidatas:", candidatas[:12])
 for v in candidatas[:80]:
     try:
         h = get(v)
