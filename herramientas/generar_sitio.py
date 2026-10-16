@@ -81,7 +81,7 @@ def pag(titulo, desc, cuerpo, raiz=""):
 <footer><b>Acierta Max, S.A. de C.V. · Inmobiliaria autorizada para la comercialización de desarrollos de GIG.</b> GIG es marca de su titular; cifras de trayectoria según información publicada por GIG.<br>
 Mismo precio y condiciones que con el desarrollador; la asesoría no tiene costo para ti. Profesionales inmobiliarios, miembros de AMPI y NAR.<br>
 {E(VIGENCIA)} Imágenes y renders proporcionados por GIG; pueden ser ilustrativos.<br>
-Atención 24 h por WhatsApp · asesores todos los días de 9:00 a 19:00 · <a href="https://acierta.pro">acierta.pro</a></footer></body></html>"""
+Atención 24 h por WhatsApp · asesores todos los días de 9:00 a 19:00 · <a href="https://acierta.pro">acierta.pro</a> · <a href="https://acierta.pro/aviso-privacidad.html">Aviso de privacidad</a></footer></body></html>"""
 
 def main():
     cards = []
