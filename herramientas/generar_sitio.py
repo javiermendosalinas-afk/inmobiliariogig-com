@@ -1,5 +1,8 @@
 """Genera inmobiliariogig.com: portada y una página por desarrollo, con datos oficiales de GIG (precios de septiembre 2026)."""
 import json, os, html, urllib.parse
+# Medición de Google Ads y Analytics (igual que bellavittoria.vip): clic a WhatsApp o llamada = conversión
+MEDICION = '<script async src="https://www.googletagmanager.com/gtag/js?id=AW-741016611"></script>\n<script>\nwindow.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}\ngtag(\'js\',new Date());gtag(\'config\',\'AW-741016611\');gtag(\'config\',\'G-NXLF42YLWF\');\nwindow.ACIERTA_CONV_LABEL=\'AXCuCP-hrZ0dEKOIrOEC\';/* cuando exista la conversion "Clic en WhatsApp", va aqui su etiqueta */\ndocument.addEventListener(\'click\',function(e){var a=e.target.closest&&e.target.closest(\'a[href*="wa.me/"],a[href^="tel:"]\');if(!a)return;\n var wa=a.href.indexOf(\'wa.me/\')>=0;gtag(\'event\',wa?\'clic_whatsapp\':\'clic_llamada\',{sitio:location.hostname,destino:a.href.slice(0,120)});\n if(wa&&window.ACIERTA_CONV_LABEL)gtag(\'event\',\'conversion\',{send_to:\'AW-741016611/\'+window.ACIERTA_CONV_LABEL});},true);\n</script>'
+
 E = lambda s: html.escape(str(s), quote=True)
 WA = "523333777337"
 VIGENCIA = "Precios de lista de GIG de septiembre de 2026, sujetos a confirmación y disponibilidad."
@@ -75,7 +78,7 @@ footer{text-align:center;color:var(--gris);font-size:13px;padding:26px 18px 40px
 def pag(titulo, desc, cuerpo, raiz=""):
     return f"""<!DOCTYPE html><html lang="es-MX"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(titulo)}</title><meta name="description" content="{E(desc)}"><meta name="robots" content="noindex">
-<style>{CSS}</style></head><body>
+<style>{CSS}</style>{MEDICION}</head><body>
 <header class="cab"><div><b>Desarrollos <span>GIG</span> · Acierta Max</b><a class="wa" href="{wa('Hola, vengo de inmobiliariogig.com y quiero información')}" target="_blank" rel="noopener">WhatsApp</a></div></header>
 {cuerpo}
 <footer><b>Acierta Max, S.A. de C.V. · Inmobiliaria autorizada para la comercialización de desarrollos de GIG.</b> GIG es marca de su titular; cifras de trayectoria según información publicada por GIG.<br>
